@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumar dos números</title>
+</head>
+<body>
+
+<script>
+// Función para validar si un valor es un número
+function esNumero(valor) {
+    return !isNaN(valor);
+}
+
+// Pedir al usuario que ingrese dos números
+let num1 = prompt("Por favor, ingresa el primer número:");
+let num2 = prompt("Ahora, ingresa el segundo número:");
+
+// Validar si los valores ingresados son números
+if (esNumero(num1) && esNumero(num2)) {
+    // Convertir los valores a números
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
+    // Calcular la suma de los números
+    const suma = num1 + num2;
+
+    // Mostrar el resultado en un alert
+    alert("La suma de los dos números es: " + suma);
+} else {
+    alert("Al menos uno de los valores ingresados no es un número válido.");
+}
+</script>
+
+</body>
+</html>

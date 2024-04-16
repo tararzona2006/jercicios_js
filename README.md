@@ -1,1 +1,1 @@
-# jercicios_js
+# ejercicios_js

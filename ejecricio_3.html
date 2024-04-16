@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar tipo de entrada</title>
+</head>
+<body>
+
+<script>
+    // Pedir al usuario que ingrese un texto
+    const texto = prompt("Por favor, ingresa un texto:");
+
+    // Verificar si el texto ingresado es numérico o una cadena
+    if (!isNaN(texto)) {
+        alert("El texto ingresado es un valor numérico.");
+    } else {
+        alert("El texto ingresado es una cadena.");
+    }
+</script>
+
+</body>
+</html>

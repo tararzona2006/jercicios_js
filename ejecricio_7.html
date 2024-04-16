@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular media de notas</title>
+</head>
+<body>
+
+<script>
+// Función para validar si un valor es un número
+function esNumero(valor) {
+    return !isNaN(valor);
+}
+
+// Función para pedir una nota al usuario y validar que sea un número
+function pedirNota(numeroNota) {
+    let nota;
+    do {
+        nota = prompt("Ingresa la nota " + numeroNota + ":");
+        if (!esNumero(nota)) {
+            alert("Por favor, ingresa un número válido para la nota " + numeroNota + ".");
+        }
+    } while (!esNumero(nota));
+    return parseFloat(nota);
+}
+
+// Pedir al usuario que ingrese las tres notas
+let nota1 = pedirNota(1);
+let nota2 = pedirNota(2);
+let nota3 = pedirNota(3);
+
+// Calcular la media de las notas
+const media = (nota1 + nota2 + nota3) / 3;
+
+// Verificar si el estudiante está aprobado o reprobado
+let mensaje;
+if (media >= 3) {
+    mensaje = "Aprobado con una nota media de " + media.toFixed(2);
+} else {
+    mensaje = "Reprobado con una nota media de " + media.toFixed(2);
+}
+
+// Mostrar el resultado en un alert
+alert(mensaje);
+</script>
+
+</body>
+</html>
+
